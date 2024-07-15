@@ -26,7 +26,7 @@ OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["youtube-summarizer.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["youtube-summarizer-fbe026bb7c16.herokuapp.com", "localhost"]
 
 
 # Application definition
