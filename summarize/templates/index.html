@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'images/play-icon.png' %}" alt="Play Icon">
+        </div>
+        <h1>YouTube Video Summarizer</h1>
+        <div class="input-container">
+            <input type="text" id="videoUrl" placeholder="Enter a YouTube Video URL...">
+            <button onclick="summarizeVideo(event)">▶️</button>
+        </div>
+        <div class="summary" id="summary">
+            <p>The summary is being generated. Please wait...</p>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>
