@@ -1,0 +1,1 @@
+web: waitress-serve --port=$PORT youtube_summarizer.wsgi:application
